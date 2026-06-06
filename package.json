@@ -1,23 +1,29 @@
 {
-  "name": "titanbot-custom",
+  "name": "Sento",
   "version": "1.1.1",
-  "description": "Modular Ultimate Community Bot by Touchpoint Support",
+  "description": "Sento bot",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
     "start": "node src/app.js",
+    "prod": "NODE_ENV=production node src/app.js",
+    "dev": "node --watch src/app.js",
+
     "test": "node --test tests/**/*.test.js",
-    "migrate": "node scripts/migrate.js apply",
-    "migrate:check": "node scripts/migrate.js check",
-    "migrate:status": "node scripts/migrate.js status",
-    "backup:db": "node scripts/backup.js",
-    "restore:db": "node scripts/restore.js",
-    "backup:drill": "node scripts/restore-drill.js"
+
+    "db:migrate": "node scripts/migrate.js apply",
+    "db:status": "node scripts/migrate.js status",
+
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "dependencies": {
+    "discord.js": "^14.15.3",
     "@discordjs/rest": "^2.6.1",
     "axios": "^1.15.2",
-    "discord.js": "^14.15.3",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "node-cron": "^4.2.1",
@@ -25,9 +31,5 @@
     "winston": "^3.19.0",
     "winston-daily-rotate-file": "^5.0.0",
     "zod": "^3.25.76"
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
