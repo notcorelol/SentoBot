@@ -21,11 +21,11 @@ export default {
 
       const embed = createEmbed({ title: "📊 System Statistics", description: "Real-time performance metrics." }).addFields(
         { name: "Servers", value: `${totalGuilds}`, inline: true },
-        { name: "Users", value: `${totalMembers}`, inline: true },
-        { name: "Node.js", value: `${nodeVersion}`, inline: true },
-        { name: "Discord.js", value: `v${version}`, inline: true },
+        { name: "<:user:1513123331782738031> Users", value: `${totalMembers}`, inline: true },
+        { name: "<:node:1513122426991415407> Node.js", value: `${nodeVersion}`, inline: true },
+        { name: "<:discord:1513122602741403748> Discord.js", value: `v${version}`, inline: true },
         {
-          name: "Memory Usage",
+          name: ":brain: Memory Usage",
           value: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`,
           inline: true,
         },
