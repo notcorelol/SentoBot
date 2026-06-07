@@ -27,7 +27,7 @@ export default {
         { name: "<:stats:1513123713711870083> Ping", value: `${apiLatency}ms`, inline: true },
         { name: "<:uptime:1513123447314583673> Uptime", value: `\`\`\`${uptimeStr}\`\`\``, inline: true
         {
-          name: ":brain: Memory Usage",
+          name: "Memory Usage",
           value: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`,
           inline: true,
         },
