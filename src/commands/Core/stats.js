@@ -24,6 +24,7 @@ export default {
         { name: "<:user:1513123331782738031> Users", value: `${totalMembers}`, inline: true },
         { name: "<:node:1513122426991415407> Node.js", value: `${nodeVersion}`, inline: true },
         { name: "<:discord:1513122602741403748> Discord.js", value: `v${version}`, inline: true },
+        { name: "<:stats:1513123713711870083> Ping", value: `${apiLatency}ms`, inline: true },
         {
           name: ":brain: Memory Usage",
           value: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`,
