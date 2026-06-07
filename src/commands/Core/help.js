@@ -168,13 +168,13 @@ export async function createInitialHelpMenu(client) {
         .setStyle(ButtonStyle.Danger);
 
     const supportButton = new ButtonBuilder()
-        .setLabel("Support Server")
-        .setURL("https://discord.gg/QnWNz2dKCE")
+        .setLabel("Sento support")
+        .setURL("https://discord.gg/5EK3vKs27A")
         .setStyle(ButtonStyle.Link);
 
     const touchpointButton = new ButtonBuilder()
-        .setLabel("Learn from Touchpoint")
-        .setURL("https://www.youtube.com/@TouchDisc")
+        .setLabel("Add me on Discord!")
+        .setURL("https://discord.com/users/1026123967003631756")
         .setStyle(ButtonStyle.Link);
 
     const selectRow = createSelectMenu(
