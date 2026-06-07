@@ -19,7 +19,7 @@ export default {
       );
       const nodeVersion = process.version;
 
-      const embed = createEmbed({ title: "📊 System Statistics", description: "Real-time performance metrics." }).addFields(
+      const embed = createEmbed({ title: "<:stats:1513123713711870083> Bot statistics", description: "Bot information\n**Name**: `Sento`\n**ID**: `1512738193932288030`\n **Created**: Saturday, June, 6th\n<a:developer:1513128854841982997> Developer: (c) `corelol.`\n<:github:1513133208210767892> Github: `notcorelol`" }).addFields(
         { name: "Servers", value: `${totalGuilds}`, inline: true },
         { name: "<:user:1513123331782738031> Users", value: `${totalMembers}`, inline: true },
         { name: "<:node:1513122426991415407> Node.js", value: `${nodeVersion}`, inline: true },
