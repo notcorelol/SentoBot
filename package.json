@@ -8,12 +8,9 @@
     "start": "node src/app.js",
     "prod": "NODE_ENV=production node src/app.js",
     "dev": "node --watch src/app.js",
-
     "test": "node --test tests/**/*.test.js",
-
     "db:migrate": "node scripts/migrate.js apply",
     "db:status": "node scripts/migrate.js status",
-
     "backup": "node scripts/backup.js",
     "restore": "node scripts/restore.js"
   },
@@ -21,9 +18,10 @@
     "node": ">=24.x"
   },
   "dependencies": {
-    "discord.js": "^14.15.3",
     "@discordjs/rest": "^2.6.1",
+    "@vercel/speed-insights": "^2.0.0",
     "axios": "^1.15.2",
+    "discord.js": "^14.15.3",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "node-cron": "^4.2.1",

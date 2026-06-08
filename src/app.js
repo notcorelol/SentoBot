@@ -3,6 +3,7 @@ import { Client, Collection, GatewayIntentBits } from 'discord.js';
 import { REST } from '@discordjs/rest';
 import express from 'express';
 import cron from 'node-cron';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 import config from './config/application.js';
 import { initializeDatabase } from './utils/database.js';
@@ -102,6 +103,33 @@ class TitanBot extends Client {
     const app = express();
     const configuredPort = Number(this.config.api?.port || process.env.PORT || 3000);
     const host = process.env.WEB_HOST || '0.0.0.0';
+
+    // Root endpoint with Speed Insights
+    app.get('/', (req, res) => {
+      res.status(200).send(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Sento Bot</title>
+          <script>
+            window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+          </script>
+          <script defer src="/_vercel/speed-insights/script.js"></script>
+        </head>
+        <body>
+          <h1>Sento Bot</h1>
+          <p>Status: Running</p>
+          <p>Uptime: ${process.uptime().toFixed(2)} seconds</p>
+          <ul>
+            <li><a href="/health">Health Check</a></li>
+            <li><a href="/ready">Ready Check</a></li>
+          </ul>
+        </body>
+        </html>
+      `);
+    });
 
     app.get('/health', (req, res) => {
       res.status(200).json({
