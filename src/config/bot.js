@@ -27,7 +27,7 @@ export const botConfig = {
         // Text users will see.
         name: "/help | Feared by nukers",
         // Activity type number (0 = Playing).
-        type: 1, 
+        type: 0, 
       },
     ],
   },
