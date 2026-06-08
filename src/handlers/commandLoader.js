@@ -139,7 +139,7 @@ export async function loadCommands(client) {
 
 
 
-export async function registerCommands(client, guildId) {
+export async function registerCommands(client) {
     try {
         const commands = [];
         let totalSubcommands = 0;
