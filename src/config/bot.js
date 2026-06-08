@@ -25,7 +25,7 @@ export const botConfig = {
     activities: [
       {
         // Text users will see.
-        name: "/help | Preventing malicious pepole",
+        name: "/help | Feared by nukers",
         // Activity type number (0 = Playing).
         type: 1, 
       },
