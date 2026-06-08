@@ -1,25 +1,24 @@
 {
-  "name": "Sento",
+  "name": "sento",
   "version": "1.1.1",
-  "description": "Sento bot",
+  "description": "Sento Discord bot",
   "main": "src/app.js",
   "type": "module",
+
   "scripts": {
     "start": "node src/app.js",
-    "prod": "NODE_ENV=production node src/app.js",
     "dev": "node --watch src/app.js",
-
-    "test": "node --test tests/**/*.test.js",
-
+    "test": "node --test",
     "db:migrate": "node scripts/migrate.js apply",
     "db:status": "node scripts/migrate.js status",
-
     "backup": "node scripts/backup.js",
     "restore": "node scripts/restore.js"
   },
+
   "engines": {
-    "node": ">=24.x"
+    "node": "20.x"
   },
+
   "dependencies": {
     "discord.js": "^14.15.3",
     "@discordjs/rest": "^2.6.1",
