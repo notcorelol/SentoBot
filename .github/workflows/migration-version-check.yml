@@ -28,16 +28,10 @@ jobs:
           --health-retries 5
 
     env:
-      POSTGRES_URL: postgresql://titanbot:titanbot@localhost:5432/titanbot
-      POSTGRES_HOST: localhost
-      POSTGRES_PORT: 5432
-      POSTGRES_DB: titanbot
-      POSTGRES_USER: titanbot
-      POSTGRES_PASSWORD: titanbot
-      POSTGRES_SSL: "false"
+      DATABASE_URL: postgresql://neondb_owner:npg_0Upmi5Lhjqkl@ep-calm-butterfly-asmezoyg.c-4.eu-central-1.aws.neon.tech/neondb?sslmode=require
       SCHEMA_VERSION: "1"
       SCHEMA_VERSION_LABEL: "baseline-v1"
-
+      
     steps:
       - name: Checkout
         uses: actions/checkout@v4
